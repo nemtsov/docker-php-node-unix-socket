@@ -1,0 +1,25 @@
+source:
+  image: alpine:latest
+  command: /bin/true
+  volumes:
+    - socket_volume:/var/run/docker
+
+node:
+  image: node:6-alpine
+  volumes_from:
+    - source
+  volumes:
+    - ./node:/app
+  working_dir: /app
+  command: npm start
+
+php:
+  image: php:7-apache
+  volumes_from:
+    - source
+  volumes:
+    - ./php:/var/www
+  links:
+    - node
+  ports:
+    - '4000:80'
