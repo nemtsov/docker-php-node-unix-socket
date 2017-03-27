@@ -5,7 +5,10 @@
         "php-http/socket-client": "^1.2",
         "guzzlehttp/psr7": "^1.4",
         "php-http/message": "^1.5",
-        "php-http/guzzle6-adapter": "^1.1"
+        "php-http/guzzle6-adapter": "^1.1",
+        "php-http/client-common": "^1.4",
+        "php-http/stopwatch-plugin": "^1.0",
+        "symfony/stopwatch": "^3.2"
     },
     "authors": [
         {
